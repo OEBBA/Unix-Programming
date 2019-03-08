@@ -1,0 +1,12 @@
+#!/bin/bash
+#Assign the command line filename to a variable
+filename=$1
+lines=0
+#Read the file till End of FILE
+while read -r line
+do
+#increment the counter
+lines=$((lines+1))
+done < "$filename"
+#Print the result
+echo "Lines: "$lines

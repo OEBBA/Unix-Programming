@@ -1,0 +1,54 @@
+#!/bin/bash
+
+# setting PS3 for prompt
+
+PS3='Make your selection: '
+
+# displaying menu
+
+select opt in "Display Current Direcory" "Display home directory" "list items in current directory" "Exit"
+
+do
+
+# using the case statement for selection
+
+    case $opt in
+
+        "Display Current Direcory")
+
+            pwd
+
+            echo ""
+
+            ;;
+
+        "Display home directory")
+
+            ls ~/
+
+            echo ""
+
+            ;;
+
+        "list items in current directory")
+
+            ls -l
+
+            echo ""
+
+            ;;
+
+        "Exit")
+
+            break
+
+            ;;
+
+        *) echo -e "invalid option $REPLY\n";;
+
+    esac
+
+done
+
+# end of script
+

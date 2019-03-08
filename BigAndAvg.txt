@@ -1,0 +1,21 @@
+#!/bin/bash
+#Get the user's input
+read -p "Enter the first number: " first
+read -p "Enter the second number: " second
+read -p "Enter the third number: " third
+#Check if the first or second or the third number is biggest
+if [ $first -gt $second ] && [ $first -gt $third ]
+then
+echo "$first is the biggest"
+elif [ $second -gt $first ] && [ $second -gt $third ]
+then
+echo "$second is the biggest"
+else
+echo "$third is the biggest"
+fi
+#Calculate the total and then the average
+total=`expr $first + $second + $third`
+avg=`expr $total / 3`
+
+#Print the result
+echo "Average is $avg"
